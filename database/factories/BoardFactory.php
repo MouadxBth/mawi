@@ -16,8 +16,12 @@ class BoardFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            //
-        ];
+      return [
+        'name' => fake()->name(),
+        'owner_id' => fake()->numberBetween(0, 100),
+        'description' => fake()->paragraph(5),
+        'created_at' => now(),
+        'updated_at' => now(),
+      ];
     }
 }
