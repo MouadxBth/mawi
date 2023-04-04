@@ -13,7 +13,7 @@ class TaskList extends Model
 
     public function tasks() : HasMany
     {
-        return $this->hasMany(Task::class, "task_id_list");
+        return $this->hasMany(Task::class, "task_list_id");
     }
 
     public function board() : BelongsTo
